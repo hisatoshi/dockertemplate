@@ -1,0 +1,29 @@
+{
+  "name": "PyLanceSample",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": ".."
+  },
+  "settings": {
+    "terminal.integrated.shell.linux": "/bin/bash",
+    "python.pythonPath": "/usr/local/pyenv/shims/python",
+    "python.jediEnabled": false,
+    "python.linting.enabled": true,
+    "python.linting.pylintEnabled": false,
+    "python.linting.flake8Enabled": true,
+    "python.linting.lintOnSave": true,
+    "python.linting.flake8Args": [
+      "--ignore=E501"
+    ],
+    "python.languageServer": "Pylance",
+    "python.analysis.diagnosticMode": "workspace",
+    "python.analysis.typeCheckingMode": "basic"
+  },
+  "extensions": [
+    "ms-python.python",
+    "ms-python.vscode-pylance"
+  ],
+  "forwardPorts": [
+    9000
+  ]
+}
